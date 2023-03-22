@@ -4,9 +4,46 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>South Park Characters</title>
+    <link rel="stylesheet" href="style.css" />
   </head>
+
   <body>
+    <header>
+      <h1>South Park Characters</h1>
+    </header>
+
+    <main>
+      <section id="characters" class="grid-container"></section>
+    </main>
+
+    <dialog id="dialog-character">
+      <section class="dialog-grid">
+        <article>
+          <section>
+            <h4>Personal info:</h4>
+            <ul>
+              <li>Name: <span id="dialog-name"></span></li>
+              <li>Nickname: <span id="dialog-nickName"></span></li>
+              <li>Occupation: <span id="dialog-occupation"></span></li>
+              <li>Age: <span id="dialog-age"></span></li>
+              <li>Voiced by: <span id="dialog-voicedBy"></span></li>
+              <li>Gender: <span id="dialog-gender"></span></li>
+              <li>Religion: <span id="dialog-religion"></span></li>
+              <li>Catch phrase: <span id="dialog-catchPhrase"></span></li>
+              <li>Hair color: <span id="dialog-hairColor"></span></li>
+              <li>School grade: <span id="dialog-schoolGrade"></span></li>
+              <li>Episodes: <span id="dialog-episodes"></span></li>
+              <li>Appearances: <span id="dialog-appearances"></span></li>
+              <li>
+                First appearance: <span id="dialog-firstAppearance"></span>
+              </li>
+            </ul>
+          </section>
+        </article>
+      </section>
+    </dialog>
+
     <script src="app.js"></script>
   </body>
 </html>

@@ -8,7 +8,7 @@ function start() {
 
   const butters = {
     name: `Leopold "Butters" Stotch`,
-    nickName:
+    nickname:
       "Inspector Butters, Marjorine, Mantequilla, Paladin Butters the Merciful, Professor Chaos",
     image:
       "http://southparkstudios.mtvnimages.com/shared/characters/kids/butters-stotch.png",
@@ -60,7 +60,7 @@ function ShowCharacters(character) {
 
 function showDialog(character) {
   document.querySelector("#dialog-name").textContent = character.name;
-  document.querySelector("#dialog-nickName").textContent = character.nickName;
+  document.querySelector("#dialog-nickName").textContent = character.nickame;
   document.querySelector("#dialog-occupation").textContent =
     character.occupation;
   document.querySelector("#dialog-age").textContent = character.age;

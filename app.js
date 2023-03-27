@@ -3,12 +3,10 @@
 window.addEventListener("load", start);
 
 async function start() {
-  const dat = await getCharacter("data/characters.json");
-  ShowCharacters(dat);
-  ShowCharacters(dat);
-  ShowCharacters(dat);
-  ShowCharacters(dat);
-  ShowCharacters(dat);
+  const dat = await getCharacter(
+    "https://cederdorff.github.io/dat-js/05-data/southpark.json"
+  );
+  dat.forEach(ShowCharacters);
 }
 
 async function getCharacter(url) {
@@ -17,15 +15,7 @@ async function getCharacter(url) {
   return data;
 }
 
-function showAllCharacters(list) {
-  // parametre (data)
-  // ShowCharacters();
-}
-
 function ShowCharacters(character) {
-  // skal have et objekt
-  // skal skrive HTML
-  // const myHtml?
   const myHtml = `
 			<article>
 				<img src="${character.image}">
@@ -36,13 +26,14 @@ function ShowCharacters(character) {
 			</article>
 	`;
   document.querySelector("#characters").insertAdjacentHTML("beforeend", myHtml);
-
-  showDialog(character);
+  document
+    .querySelector("#characters article:last-child")
+    .addEventListener("click", () => showDialog(character));
 }
 
 function showDialog(character) {
   document.querySelector("#dialog-name").textContent = character.name;
-  document.querySelector("#dialog-nickName").textContent = character.nickame;
+  document.querySelector("#dialog-nickName").textContent = character.nickname;
   document.querySelector("#dialog-occupation").textContent =
     character.occupation;
   document.querySelector("#dialog-age").textContent = character.age;
@@ -61,14 +52,10 @@ function showDialog(character) {
     character.firstAppearance;
 
   // kan clicke på karakter
-  document
-    .querySelector("#characters article:last-child")
-    .addEventListener("click", characterClicked);
 
   // funktion inde i funtion og åbner vinduet
-  function characterClicked() {
-    document.querySelector("dialog").showModal();
-  }
+
+  document.querySelector("dialog").showModal();
 }
 
 function closeDialog() {}

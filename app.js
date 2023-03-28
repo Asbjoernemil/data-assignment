@@ -19,7 +19,7 @@ function ShowCharacters(character) {
   const myHtml = `
 			<article class="grid-item">
 				<img src="${character.image}">
-				<h2> Full name: ${character.name}</h2>
+				<h2>${character.name}</h2>
                 <p>Age: ${character.age}</p>
                 <p>School grade: ${character.schoolGrade}</p>
                 <p>${character.name} is voiced by: ${character.voicedBy}</p>

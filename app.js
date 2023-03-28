@@ -17,12 +17,12 @@ async function getCharacter(url) {
 
 function ShowCharacters(character) {
   const myHtml = `
-			<article>
+			<article class="grid-item">
 				<img src="${character.image}">
 				<h2> Full name: ${character.name}</h2>
                 <p>Age: ${character.age}</p>
                 <p>School grade: ${character.schoolGrade}</p>
-                <p>${character.name} is played by actor: ${character.voicedBy}</p>
+                <p>${character.name} is voiced by: ${character.voicedBy}</p>
 			</article>
 	`;
   document.querySelector("#characters").insertAdjacentHTML("beforeend", myHtml);
@@ -50,6 +50,7 @@ function showDialog(character) {
     character.appearances;
   document.querySelector("#dialog-firstAppearance").textContent =
     character.firstAppearance;
+  document.querySelector("#dialog-image").src = character.image;
 
   // kan clicke på karakter
 

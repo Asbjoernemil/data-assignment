@@ -53,13 +53,5 @@ function showDialog(character) {
     character.firstAppearance;
   document.querySelector("#dialog-image").src = character.image;
 
-  // kan clicke på karakter
-
-  // funktion inde i funtion og åbner vinduet
-
   document.querySelector("dialog").showModal();
 }
-
-function closeDialog() {}
-
-function getDescription() {}

@@ -21,8 +21,9 @@ function ShowCharacters(character) {
 				<img src="${character.image}">
 				<h2>${character.name}</h2>
                 <p>Age: ${character.age}</p>
-                <p>School grade: ${character.schoolGrade}</p>
-                <p>${character.name} is voiced by: ${character.voicedBy}</p>
+                <p>Occupation: ${character.occupation}</p>
+                <p>Gender: ${character.gender}</p>
+                
 			</article>
 	`;
   document.querySelector("#characters").insertAdjacentHTML("beforeend", myHtml);
@@ -33,7 +34,7 @@ function ShowCharacters(character) {
 
 function showDialog(character) {
   document.querySelector("#dialog-name").textContent = character.name;
-  document.querySelector("#dialog-nickName").textContent = character.nickname;
+  document.querySelector("#dialog-nickname").textContent = character.nickname;
   document.querySelector("#dialog-occupation").textContent =
     character.occupation;
   document.querySelector("#dialog-age").textContent = character.age;
